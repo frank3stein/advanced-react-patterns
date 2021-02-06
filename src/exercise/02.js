@@ -4,7 +4,7 @@
 import * as React from 'react'
 import {Switch} from '../switch'
 
-function Toggle() {
+function Toggle(props) {
   const [on, setOn] = React.useState(false)
   const toggle = () => setOn(!on)
 
@@ -14,19 +14,36 @@ function Toggle() {
   // 💰 React.Children.map(props.children, child => {/* return child clone here */})
   // 📜 https://reactjs.org/docs/react-api.html#reactchildren
   // 📜 https://reactjs.org/docs/react-api.html#cloneelement
-  return <Switch on={on} onClick={toggle} />
+  return React.Children.map(props.children, child => {
+    
+    // console.log(typeof child.type === "string")
+    if (typeof child.type === "string") { // if it is a dom element, just render it
+      return child
+    }
+    return React.cloneElement(child, { on, toggle })
+
+    //
+    // you can limit this compound component with allowed types
+    // if (allowedTypes.includes(child.type)) {
+    //   return React.cloneElement(child, {on, toggle})
+    // }
+  })
+  // destructure and pass the props, otherwise if you pass props, you will also pass children of the parent
+  // return <Switch on={on} onClick={toggle} />
 }
 
 // 🐨 Flesh out each of these components
-
 // Accepts `on` and `children` props and returns `children` if `on` is true
-const ToggleOn = () => null
+const ToggleOn = ({on, children}) => on ? children : null
 
 // Accepts `on` and `children` props and returns `children` if `on` is false
-const ToggleOff = () => null
+const ToggleOff = ({on , children}) => on ? null : children
 
 // Accepts `on` and `toggle` props and returns the <Switch /> with those props.
-const ToggleButton = () => null
+const ToggleButton = ({ on, toggle }) => <Switch on={on} onClick={ toggle}/>
+
+// define the allowed
+const allowedTypes = [ToggleOn, ToggleOff, ToggleButton]
 
 function App() {
   return (
@@ -34,6 +51,7 @@ function App() {
       <Toggle>
         <ToggleOn>The button is on</ToggleOn>
         <ToggleOff>The button is off</ToggleOff>
+        <span>Hello</span>
         <ToggleButton />
       </Toggle>
     </div>
