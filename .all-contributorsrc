@@ -249,6 +249,60 @@
       "contributions": [
         "code"
       ]
+    },
+    {
+      "login": "DaleSeo",
+      "name": "Dale Seo",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/5466341?v=4",
+      "profile": "https://www.daleseo.com",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "bobbywarner",
+      "name": "Bobby Warner",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/554961?v=4",
+      "profile": "http://bobbywarner.com",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "sophiabrandt",
+      "name": "Sophia Brandt",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/16630701?v=4",
+      "profile": "https://www.sophiabrandt.com",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "ph08n1x",
+      "name": "ph08n1x",
+      "avatar_url": "https://avatars.githubusercontent.com/u/4249732?v=4",
+      "profile": "https://github.com/ph08n1x",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "Suhas010",
+      "name": "Suhas R More",
+      "avatar_url": "https://avatars.githubusercontent.com/u/8597576?v=4",
+      "profile": "https://www.suhas010.com",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "0xnoob",
+      "name": "0xnoob",
+      "avatar_url": "https://avatars.githubusercontent.com/u/49793844?v=4",
+      "profile": "https://github.com/0xnoob",
+      "contributions": [
+        "code"
+      ]
     }
   ],
   "repoHost": "https://github.com",
